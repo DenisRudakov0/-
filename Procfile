@@ -1,0 +1,1 @@
+web: gunicorn zd4.wsgi --log-file -
