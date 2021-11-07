@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %} 
+{% block title %}Log-in{% endblock %}
+{% block content %}
+    <h1>Log-in</h1>
+    <p>Please, use the following form to log-in:</p>
+    <form action="." method="post">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <p><input type="submit" value="Log in"></p>
+    </form>
+    <table>
+    <tr>
+        <td><img src = {% static 'account/img/facebook.jpg' %} width = "250px"></td>
+        <td><img src = {% static 'account/img/google.jpg' %} width = "250px"></td>
+        <td><img src = {% static 'account/img/vk.jpg' %} width = "250px"></td>
+    </tr>
+</table>
+{% endblock %}
